@@ -10,6 +10,9 @@ class Coupon < ActiveRecord::Base
   end
 
   def create
-  end 
+    @coupon = Coupon.new
+    @coupon.coupon_code = params[:coupon_code]
+    @coupon.store = params[:store]
+  end
 
 end
